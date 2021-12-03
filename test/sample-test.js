@@ -40,6 +40,14 @@ describe("PredictBTC", function () {
     }
   });
 
+  it("Distributer check", async function () {
+    try {
+      await predict.snapshot();
+    } catch (error) {
+      console.log(error.message);
+    }
+  })
+
   it("Calcuration check", async function () {
     expect(await predict.calculate(1000, 1000)).to.equal(50000);
     expect(await predict.calculate(1000, 995)).to.equal(20000);

@@ -95,7 +95,7 @@ contract PredictBTC is ERC20 {
     function deadline() public {
         require(block.timestamp > deadline_time, "too eary");
         deadline_time = deadline_time + 1 weeks;
-        _mint(msg.sender, 1000);
+        _mint(msg.sender, 1000 * 10 ** 18);
         rotation = !rotation;
     }
 
@@ -103,7 +103,7 @@ contract PredictBTC is ERC20 {
     function snapshot() public {
         require(block.timestamp > snapshot_time, "too eary");
         snapshot_time = snapshot_time + 1 weeks;
-        _mint(msg.sender, 1000);
+        _mint(msg.sender, 1000 * 10 ** 18);
         if(!rotation) {
             index1 = 0;
             avg1 = 0;
@@ -112,21 +112,21 @@ contract PredictBTC is ERC20 {
             index2 = 0;
             avg2 = 0;
         }
-        BTCprice = getLatestBtcJpyPrice();
         distributer();
     }
 
     // トークン配布
     function distributer() private {
+        BTCprice = getLatestBtcJpyPrice();
         if(!rotation) {
-            for(uint i =0; i <= index1; i++) {
-                _mint(participant1[i], calculate(BTCprice, predict_price1[i]));
+            for(uint i =1; i <= index1; i++) {
+                _mint(participant1[i], calculate(BTCprice, predict_price1[i]) * 10 ** 18);
                 play1[participant1[i]] = false;
             }
         }
         else {
-            for(uint i =0; i <= index2; i++) {
-                _mint(participant2[i], calculate(BTCprice, predict_price2[i]));
+            for(uint i =1; i <= index2; i++) {
+                _mint(participant2[i], calculate(BTCprice, predict_price2[i]) * 10 ** 18);
                 play2[participant2[i]] = false;
             }
         }
