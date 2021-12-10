@@ -22,17 +22,24 @@ describe("PredictBTC", function () {
   });
 
   it("Play index check", async function () {
-    expect(await predict.index1()).to.equal(0);
-    expect(await predict.avg1()).to.equal(0);
+    expect(await predict.index()).to.equal(0);
+    expect(await predict.avg()).to.equal(0);
     const PlayTx = await predict.play(100);
     await PlayTx.wait();
-    expect(await predict.index1()).to.equal(1);
-    expect(await predict.avg1()).to.equal(100);
+    expect(await predict.index()).to.equal(1);
+    expect(await predict.avg()).to.equal(100);
+  });
+
+  it("Play price check", async function () {
+    expect(await predict.getPredictPrice()).to.equal(0);
+    const PlayTx = await predict.play(100);
+    await PlayTx.wait();
+    expect(await predict.getPredictPrice()).to.equal(100);
   });
 
   it("Double Play check", async function () {
-    const PlayTx1 = await predict.play(100);
-    await PlayTx1.wait();
+    const PlayTx = await predict.play(100);
+    await PlayTx.wait();
     try {
       await predict.play(100);
     } catch(error) {

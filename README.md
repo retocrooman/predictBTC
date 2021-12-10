@@ -1,15 +1,10 @@
-# Basic Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
+# PredictBTC
+- 事前準備
+metamaskのインストール
+- webアプリの立ち上げ方
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+git clone https://github.com/retocrooman/predictBTC.git
+cd predictBTC/clinet
+npm i
+npm run start
 ```
