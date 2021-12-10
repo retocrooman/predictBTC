@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/predictBTC/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/predictBTC/static/js/main.90cac2f7.chunk.js",
+    "main.js.map": "/predictBTC/static/js/main.90cac2f7.chunk.js.map",
+    "runtime-main.js": "/predictBTC/static/js/runtime-main.4d803436.js",
+    "runtime-main.js.map": "/predictBTC/static/js/runtime-main.4d803436.js.map",
+    "static/js/2.740d6d26.chunk.js": "/predictBTC/static/js/2.740d6d26.chunk.js",
+    "static/js/2.740d6d26.chunk.js.map": "/predictBTC/static/js/2.740d6d26.chunk.js.map",
+    "static/js/3.33de78a3.chunk.js": "/predictBTC/static/js/3.33de78a3.chunk.js",
+    "static/js/3.33de78a3.chunk.js.map": "/predictBTC/static/js/3.33de78a3.chunk.js.map",
+    "index.html": "/predictBTC/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/predictBTC/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.740d6d26.chunk.js.LICENSE.txt": "/predictBTC/static/js/2.740d6d26.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d803436.js",
+    "static/js/2.740d6d26.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.90cac2f7.chunk.js"
+  ]
+}
