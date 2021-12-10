@@ -12,6 +12,7 @@
 ```shell
 git clone https://github.com/retocrooman/predictBTC.git
 cd predictBTC
+npm i
 // コントラクトとテストのファイルを編集
 npx hardhat test
 ```
