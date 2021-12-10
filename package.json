@@ -1,11 +1,11 @@
 {
+  "homepage": "https://retocrooman.github.io/predictBTC/",
   "name": "predict-dapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
