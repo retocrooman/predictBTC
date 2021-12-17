@@ -6,7 +6,7 @@ function App() {
   return (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Admin />} />
+      <Route path="/predictBTC" element={<Admin />} />
     </Routes>
   </BrowserRouter>
   );
